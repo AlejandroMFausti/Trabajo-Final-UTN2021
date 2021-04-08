@@ -1,0 +1,40 @@
+<div class="container-fluid bg-light p-2 mb-5 text-dark fw-bold">
+    <div class="container">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <a class="text-dark" href="/">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a class="text-dark" href="/productos">Productos</a>
+            </li>
+            <li class="breadcrumb-item">
+                {{producto.categoria}}
+            </li>
+        </ol>
+    </nav>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+
+
+    <div class="row">
+        {{#each productos}}
+            <div class="col-4">
+                
+            <a class="links" href="/productos/{{id}}" title="Ver {{nombre}}">
+                <div class="card mb-4 card-prod shadow-sm bg-info">
+                        <img  src="/images/{{imagen}}" class="card-img" alt="">
+                    <div class="card-body">
+                        <p class="h4">{{nombre}}</p>
+                        {{!-- <span>{{precio}}</span> --}}
+                        {{!-- <a class="btn btn-primary" href="/productos/{{id}}">Entrar</a> --}}
+                    </div>
+                </div>
+            </a>
+            </div>
+        {{/each}}
+    </div>
+</div>
