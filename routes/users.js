@@ -9,8 +9,8 @@ function User(nombre, apellido, edad, redes, frase) {
   this.redes = redes
   this.frase = frase}
 
-let user1 = new User("Alejandro","Fausti",03424636716,['alejandromartinfausti@gmail.com'],'Vendedor, Repasrtidor y Dueño')
-let user2 = new User("Esteban","Sbodio",03425371420,['esteban.sbodio@gmail.com'],'Vendedor, Repasrtidor y Dueño')
+let user1 = new User("Alejandro","Fausti",03424636716,['alejandromartinfausti@gmail.com'],'Vendedor, Repartidor y Dueño')
+let user2 = new User("Esteban","Sbodio",03425371420,['esteban.sbodio@gmail.com'],'Vendedor, Repartidor y Dueño')
 
 
 const users = []
