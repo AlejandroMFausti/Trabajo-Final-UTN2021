@@ -13,9 +13,9 @@ router.get('/', function(req,res){
 })
 
 router.post('/', function(req,res) {
-    /*console.log(req.body.nombre)
+    console.log(req.body.nombre)
     console.log(req.body.email)
-    console.log(req.body.localidad)*/
+    console.log(req.body.localidad)
 
     let nombreForm, emailForm, localidadForm
     nombreForm = req.body.nombre
@@ -47,7 +47,7 @@ router.post('/', function(req,res) {
                     secure: true, // true for 465, false for other ports
                     auth: {
                       user: "alejandromartinfausti@gmail.com",
-                      pass: "untmjifkurrbethf", // En Gmail, debemos crear una contraseña de aplicaciones
+                      pass: "ysphugzuyuswkbpz", // En Gmail, debemos crear una contraseña de aplicaciones
                       //https://support.google.com/accounts/answer/185833
                     },
                   });
@@ -80,11 +80,12 @@ router.post('/', function(req,res) {
                   
                 //Model -> objeto con la estructura de la tabla
                 //Interface del objeto de envio
+
                 const envioForm = db.define('contactos',{
                     id:{
-                        type:Sequelize.NUMBER,
+                        type: Sequelize.NUMBER,
                         allowNull:false,
-                        primaryKey:true,//clave primaria
+                        primaryKey:true,    //clave primaria
                         autoIncrement: true//autoincremento
                     },
                     nombre:{
@@ -105,20 +106,18 @@ router.post('/', function(req,res) {
                     const enviar = await envioForm.create({
                         id:'',
                         nombre: nombreForm,
-                        email:emailForm,
-                        localidad:localidadForm
+                        email: emailForm,
+                        localidad: localidadForm
                     })
                     console.log(enviar)
                     console.log("Dato enviado")
                 }
                 catch (error) {
-                    console.log(error + "/ Enviando desde el Form Contacto")
+                    console.log(error + "/ Enviando desde el Form Contactos")
 
                 }
                 
-
-
-
+               
                 res.render('formEnviado.hbs',{
                     nombreForm,
                     emailForm,
